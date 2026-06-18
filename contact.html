@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Stackly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="latest.html">Latest News</a>
+                <a href="magazine.html">Magazine</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="current">Contact</a>
+                <a href="signin.html">Sign In</a>
+                <a href="register.html" class="nav-register">Register</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div style="background-color: var(--primary); color: white; padding: 60px 20px; text-align: center;">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p style="font-size: 18px; margin-top: 15px;">We'd love to hear from you</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="grid-2" style="margin-top: 60px; margin-bottom: 60px;">
+                <div>
+                    <h2>Get in Touch</h2>
+
+                    <div class="contact-info-card">
+                        <span class="contact-info-card-icon">📍</span>
+                        <p class="contact-info-card-title">Address</p>
+                        <p>123 News Street, Media City, MC 12345</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <span class="contact-info-card-icon">📞</span>
+                        <p class="contact-info-card-title">Phone</p>
+                        <p>+1 (555) 123-4567</p>
+                        <p style="font-size: 14px; color: var(--darkGray);">Ext. 456 (Editorial) • Ext. 789 (Support)</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <span class="contact-info-card-icon">📧</span>
+                        <p class="contact-info-card-title">Email</p>
+                        <p><a href="mailto:contact@stackly.com" style="color: var(--primary); text-decoration: none;">contact@stackly.com</a></p>
+                        <p style="font-size: 14px;"><a href="mailto:editorial@stackly.com" style="color: var(--darkGray); text-decoration: none;">editorial@stackly.com</a></p>
+                        <p style="font-size: 14px;"><a href="mailto:support@stackly.com" style="color: var(--darkGray); text-decoration: none;">support@stackly.com</a></p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <span class="contact-info-card-icon">⏰</span>
+                        <p class="contact-info-card-title">Working Hours</p>
+                        <p>Monday - Friday: 9am - 6pm EST</p>
+                        <p style="font-size: 14px; color: var(--darkGray);">Saturday - Sunday: 10am - 4pm EST</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <span class="contact-info-card-icon">🌐</span>
+                        <p class="contact-info-card-title">Follow Us</p>
+                        <div class="contact-social-icons">
+                            <a href="404.html" class="contact-social-icon facebook" title="Facebook">f</a>
+                            <a href="404.html" class="contact-social-icon instagram" title="Instagram">&#x1F4F7;</a>
+                            <a href="404.html" class="contact-social-icon twitter" title="X (Twitter)">&#x1D54F;</a>
+                            <a href="404.html" class="contact-social-icon linkedin" title="LinkedIn">in</a>
+                            <a href="404.html" class="contact-social-icon youtube" title="YouTube">&#9654;</a>
+                    
+                        </div>
+                    </div>
+                </div>
+
+                <form class="signin-form" style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin: 0; max-width: 100%; width: 100%; box-sizing: border-box;" id="contactForm" novalidate>
+                    <h2 style="text-align: center; margin-bottom: 30px; color: var(--darkGray);">Send us a Message</h2>
+                    <div class="form-group">
+                        <input type="text" id="firstName" placeholder="First Name">
+                        <div class="error-message" id="firstNameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="lastName" placeholder="Last Name">
+                        <div class="error-message" id="lastNameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Address">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                        <div class="error-message" id="phoneError"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5"></textarea>
+                        <div class="error-message" id="messageError"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Google Maps -->
+        <div style="background: var(--lightGray, #f8f9fa); padding: 60px 20px;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 10px;">Our Location</h2>
+                <p style="text-align: center; color: var(--darkGray); margin-bottom: 32px; font-size: 15px;">123 News Street, Media City, MC 12345</p>
+                <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.07);">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179461!2d-73.98823!3d40.74844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1718000000000!5m2!1sen!2sus"
+                        width="100%"
+                        height="420"
+                        style="display: block; border: 0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Stackly Office Location">
+                    </iframe>
+                </div>
+                <div style="display: flex; justify-content: center; margin-top: 20px;">
+                    <a href="https://www.google.com/maps/search/123+News+Street+Media+City" target="_blank" rel="noopener noreferrer"
+                       class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; font-size: 14px;">
+                        📍 Open in Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+                <p style="margin-top: 10px; font-size: 14px; opacity: 0.75; max-width: 220px; line-height: 1.6;">India's most trusted News &amp; Magazine network, delivering unbiased journalism and in-depth stories since 2018.</p>
+                <div style="display: flex; gap: 12px; margin-top: 16px;">
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#1877F2'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x66;</a>
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#000'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1D54F;</a>
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#E1306C'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1F4F7;</a>
+                    <!--<a href="" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#0A66C2'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1F4BC;</a>-->
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a class="footer-link" href="index.html"><span>Home</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="about.html"><span>About Us</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="categories.html"><span>Categories</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="latest.html"><span>Latest News</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="magazine.html"><span>Magazine</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="blog.html"><span>Blog</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="contact.html"><span>Contact</span><i class="link-arrow">→</i></a>
+            </div>
+            <div class="footer-section">
+                <h3>News &amp; Magazine</h3>
+                <div class="newsroom-link"><span class="newsroom-icon">📰</span><span>Breaking News</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">🔥</span><span>Trending Stories</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">✍️</span><span>Editorial Picks</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📖</span><span>Monthly Magazine</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📡</span><span>Industry Updates</span></div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-item"><span class="contact-icon">📍</span><span>123 News Street, Media City, MC 12345</span></div>
+                <div class="contact-item"><span class="contact-icon">📞</span><span>+1 (555) 123-4567</span></div>
+                <div class="contact-item"><span class="contact-icon">📧</span><a href="mailto:contact@stackly.com" style="color: inherit; text-decoration: none;">contact@stackly.com</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly. All Rights Reserved. | <a href="404.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a> | <a href="404.html" style="color: inherit; text-decoration: underline;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

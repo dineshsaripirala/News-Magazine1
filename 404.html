@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 – Page Not Found | Stackly</title>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* ── Background ── */
+        .bg {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg,
+                #04080f 0%,
+                #06102a 30%,
+                #071830 60%,
+                #040c1e 100%);
+            z-index: 0;
+        }
+
+        /* Grid lines */
+        .bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0, 102, 204, 0.055) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 102, 204, 0.055) 1px, transparent 1px);
+            background-size: 55px 55px;
+        }
+
+        /* Radial spotlight */
+        .bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 50% 40%,
+                rgba(0, 102, 204, 0.12) 0%,
+                transparent 70%);
+        }
+
+        /* ── Floating orbs ── */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .orb-1 {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(0,102,204,0.18), transparent 70%);
+            top: -140px; left: -140px;
+            animation: orb-drift 9s ease-in-out infinite;
+        }
+        .orb-2 {
+            width: 380px; height: 380px;
+            background: radial-gradient(circle, rgba(0,168,168,0.15), transparent 70%);
+            bottom: -100px; right: -100px;
+            animation: orb-drift 11s ease-in-out infinite reverse;
+        }
+        .orb-3 {
+            width: 250px; height: 250px;
+            background: radial-gradient(circle, rgba(212,175,55,0.09), transparent 70%);
+            top: 55%; left: 60%;
+            animation: orb-drift 7s ease-in-out infinite 2s;
+        }
+
+        @keyframes orb-drift {
+            0%,100% { transform: translate(0,0) scale(1); }
+            33%      { transform: translate(30px,-25px) scale(1.06); }
+            66%      { transform: translate(-20px,20px) scale(0.96); }
+        }
+
+        /* ── Page wrapper ── */
+        .page {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 700px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ── Logo ── */
+        .logo-link {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            margin-bottom: 32px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .logo-link:hover { color: #ffffff; transform: scale(1.05); }
+
+        /* ── Glass card ── */
+        .card {
+            width: 100%;
+            background: rgba(255,255,255,0.055);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+            border: 1px solid rgba(255,255,255,0.11);
+            border-radius: 28px;
+            padding: 56px 48px 44px;
+            text-align: center;
+            box-shadow:
+                0 40px 100px rgba(0,0,0,0.55),
+                0 0 0 1px rgba(255,255,255,0.04),
+                inset 0 1px 0 rgba(255,255,255,0.09);
+            animation: card-rise 0.75s cubic-bezier(0.22,1,0.36,1) forwards;
+            opacity: 0;
+            transition: box-shadow 0.5s ease, transform 0.5s ease;
+        }
+
+        .card:hover {
+            box-shadow:
+                0 50px 120px rgba(0,0,0,0.6),
+                0 0 60px rgba(0,102,204,0.18),
+                0 0 0 1px rgba(0,102,204,0.15),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+            transform: translateY(-4px);
+        }
+
+        @keyframes card-rise {
+            from { opacity: 0; transform: translateY(48px) scale(0.96); }
+            to   { opacity: 1; transform: translateY(0)   scale(1); }
+        }
+
+        /* ── 404 number ── */
+        .num {
+            font-size: clamp(108px, 20vw, 168px);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -10px;
+            background: linear-gradient(135deg, #3399ff 0%, #00cccc 45%, #0066CC 80%, #00A8A8 100%);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation:
+                num-gradient 4s ease-in-out infinite,
+                num-glow     2.5s ease-in-out infinite alternate;
+            margin-bottom: 4px;
+        }
+
+        @keyframes num-gradient {
+            0%,100% { background-position: 0%   50%; }
+            50%      { background-position: 100% 50%; }
+        }
+        @keyframes num-glow {
+            from { filter: drop-shadow(0 0 18px rgba(0,102,204,0.45)); }
+            to   { filter: drop-shadow(0 0 38px rgba(0,168,168,0.7)); }
+        }
+
+        /* ── SVG illustration ── */
+        .illustration {
+            width: 118px;
+            height: 118px;
+            margin: 18px auto 8px;
+            animation: float-bounce 3.5s ease-in-out infinite;
+        }
+
+        @keyframes float-bounce {
+            0%,100% { transform: translateY(0); }
+            50%      { transform: translateY(-14px); }
+        }
+
+        /* ── Text ── */
+        .title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.4px;
+            margin: 18px 0 14px;
+        }
+
+        .desc {
+            font-size: 15.5px;
+            color: rgba(255,255,255,0.58);
+            line-height: 1.72;
+            max-width: 460px;
+            margin: 0 auto 38px;
+        }
+
+        /* ── Buttons ── */
+        .btn-row {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Back button */
+        .btn-back {
+            padding: 14px 34px;
+            background: rgba(255,255,255,0.08);
+            color: #ffffffcc;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 50px;
+            font-size: 14.5px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-back:hover {
+            transform: translateY(-5px);
+            background: rgba(0,102,204,0.25);
+            border-color: rgba(0,102,204,0.55);
+            color: #ffffff;
+            box-shadow:
+                0 10px 36px rgba(0,102,204,0.45),
+                0 0 0 1px rgba(0,102,204,0.3);
+        }
+        .btn-back:active { transform: translateY(-2px); }
+
+        /* Home button */
+        .btn-home {
+            padding: 14px 34px;
+            background: linear-gradient(135deg, #0066CC 0%, #00A8A8 100%);
+            background-size: 200% 200%;
+            color: #ffffff;
+            border: none;
+            border-radius: 50px;
+            font-size: 14.5px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(0,102,204,0.45);
+        }
+        .btn-home::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -110%;
+            width: 65%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
+            transform: skewX(-20deg);
+            pointer-events: none;
+        }
+        .btn-home:hover {
+            transform: translateY(-5px) scale(1.04);
+            background-position: right center;
+            box-shadow:
+                0 16px 48px rgba(0,102,204,0.6),
+                0 4px 14px rgba(0,168,168,0.35);
+            color: #ffffff;
+        }
+        .btn-home:hover::after { animation: sweep 0.5s ease forwards; }
+        .btn-home:active { transform: translateY(-2px) scale(1.01); }
+
+        @keyframes sweep {
+            from { left: -110%; }
+            to   { left: 120%; }
+        }
+
+        /* ── Quick nav tags ── */
+        .tags {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 34px;
+            padding-top: 26px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .tag {
+            padding: 6px 16px;
+            background: rgba(255,255,255,0.055);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 20px;
+            font-size: 12.5px;
+            color: rgba(255,255,255,0.48);
+            text-decoration: none;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+        .tag:hover {
+            background: rgba(0,102,204,0.2);
+            border-color: rgba(0,102,204,0.4);
+            color: rgba(255,255,255,0.88);
+            transform: translateY(-2px);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 560px) {
+            .card { padding: 40px 22px 34px; }
+            .title { font-size: 22px; }
+            .desc { font-size: 14px; }
+            .btn-row { flex-direction: column; align-items: stretch; }
+            .btn-back, .btn-home { justify-content: center; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .orb-1, .orb-2, .orb-3,
+            .illustration, .num { animation: none !important; filter: none !important; }
+            @keyframes card-rise { from { opacity:1; transform:none; } }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background layers -->
+    <div class="bg"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="page">
+        <!-- Brand logo -->
+        <a href="index.html" class="logo-link"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+
+        <!-- Glass card -->
+        <div class="card">
+
+            <!-- 404 animated number -->
+            <div class="num">404</div>
+
+            <!-- News-themed illustration -->
+            <div class="illustration" aria-hidden="true">
+                <svg viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- newspaper body -->
+                    <rect x="8" y="16" width="72" height="88" rx="7"
+                          fill="rgba(255,255,255,0.055)"
+                          stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+                    <!-- headline bar -->
+                    <rect x="16" y="27" width="44" height="6" rx="2.5"
+                          fill="rgba(255,255,255,0.32)"/>
+                    <!-- sub-headline lines -->
+                    <rect x="16" y="39" width="55" height="3" rx="1.5"
+                          fill="rgba(255,255,255,0.16)"/>
+                    <rect x="16" y="46" width="48" height="3" rx="1.5"
+                          fill="rgba(255,255,255,0.12)"/>
+                    <rect x="16" y="53" width="42" height="3" rx="1.5"
+                          fill="rgba(255,255,255,0.1)"/>
+                    <!-- image placeholder box -->
+                    <rect x="16" y="62" width="30" height="24" rx="3"
+                          fill="rgba(255,255,255,0.07)"
+                          stroke="rgba(255,255,255,0.13)" stroke-width="1"/>
+                    <!-- caption lines -->
+                    <rect x="50" y="66" width="22" height="3" rx="1.5"
+                          fill="rgba(255,255,255,0.14)"/>
+                    <rect x="50" y="73" width="18" height="3" rx="1.5"
+                          fill="rgba(255,255,255,0.09)"/>
+                    <rect x="16" y="92" width="55" height="3" rx="1.5"
+                          fill="rgba(255,255,255,0.08)"/>
+
+                    <!-- magnifying glass ring -->
+                    <circle cx="84" cy="76" r="22"
+                            fill="rgba(0,102,204,0.12)"
+                            stroke="rgba(0,153,255,0.55)" stroke-width="2.5"/>
+                    <!-- inner lens shimmer -->
+                    <circle cx="84" cy="76" r="14"
+                            fill="rgba(0,168,168,0.08)"
+                            stroke="rgba(0,220,220,0.5)" stroke-width="1.5"/>
+                    <!-- handle -->
+                    <line x1="101" y1="93" x2="113" y2="106"
+                          stroke="rgba(0,120,255,0.8)" stroke-width="3.5"
+                          stroke-linecap="round"/>
+                    <!-- ? mark inside lens -->
+                    <text x="79" y="82"
+                          font-size="14" font-weight="800"
+                          fill="rgba(255,255,255,0.72)"
+                          font-family="-apple-system,sans-serif">?</text>
+                </svg>
+            </div>
+
+            <h1 class="title">Page Not Found</h1>
+
+            <p class="desc">
+                Oops! The page you are looking for could not be found.
+                The content may have been moved, removed, or the URL is incorrect.
+            </p>
+
+            <!-- Action buttons -->
+            <div class="btn-row">
+                <button class="btn-back" onclick="history.length > 1 ? history.back() : location.href='index.html'"> Go Back</button>
+                <a href="index.html" class="btn-home">  Back to Home</a>
+            </div>
+
+        </div><!-- /.card -->
+    </div><!-- /.page -->
+
+</body>
+</html>

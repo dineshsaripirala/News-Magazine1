@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Dashboard - Stackly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="editor-dashboard.html" class="current">Dashboard</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div class="container">
+            <div class="dashboard-header">
+                <div>
+                    <h1 id="dashWelcome">Editor Dashboard</h1>
+                    <p>Performance analytics and content management</p>
+                </div>
+                <a href="#" id="signOutBtn" class="btn btn-primary" onclick="event.preventDefault(); Auth.logout();">Sign Out</a>
+            </div>
+
+            <!-- User Info Card -->
+            <div class="profile-card">
+                <div class="profile-card-left">
+                    <div class="profile-avatar" id="dashAvatar"></div>
+                    <div class="profile-name-block">
+                        <h2 class="profile-name" id="dashUserName">—</h2>
+                        <span class="profile-role-badge" id="dashUserRole">—</span>
+                        <span class="profile-status-badge">Active</span>
+                    </div>
+                </div>
+                <div class="profile-card-details">
+                    <div class="profile-detail-item">
+                        <span class="profile-detail-icon">📧</span>
+                        <div>
+                            <span class="profile-detail-label">Email</span>
+                            <span class="profile-detail-value" id="dashUserEmail">—</span>
+                        </div>
+                    </div>
+                    <!--<div class="profile-detail-item">
+                        <span class="profile-detail-icon">📱</span>
+                        <div>
+                            <span class="profile-detail-label">Mobile</span>
+                            <span class="profile-detail-value" id="dashUserMobile">—</span>
+                        </div>
+                    </div>--->
+                    <!--<div class="profile-detail-item">
+                        <span class="profile-detail-icon">📅</span>
+                        <div>
+                            <span class="profile-detail-label">Member Since</span>
+                            <span class="profile-detail-value" id="dashMemberSince">—</span>
+                        </div>
+                    </div>--->
+                    <div class="profile-detail-item">
+                        <span class="profile-detail-icon">🕐</span>
+                        <div>
+                            <span class="profile-detail-label">Login Time</span>
+                            <span class="profile-detail-value" id="dashLoginTime">—</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 1 — Core Stats -->
+            <div class="grid-4">
+                <div class="dashboard-card" style="border-top-color: var(--primary);">
+                    <div class="icon">📝</div>
+                    <div class="title">Total Articles</div>
+                    <div class="value" style="color: var(--teal);">156</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">+12 this month</p>
+                </div>
+                <div class="dashboard-card" style="border-top-color: var(--primary);">
+                    <div class="icon">✅</div>
+                    <div class="title">Published Posts</div>
+                    <div class="value" style="color: var(--teal);">142</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">+8 this month</p>
+                </div>
+                <div class="dashboard-card" style="border-top-color: var(--primary);">
+                    <div class="icon">📋</div>
+                    <div class="title">Draft Articles</div>
+                    <div class="value" style="color: var(--teal);">14</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">In progress</p>
+                </div>
+                <div class="dashboard-card" style="border-top-color: var(--primary);">
+                    <div class="icon">👁️</div>
+                    <div class="title">Monthly Views</div>
+                    <div class="value" style="color: var(--teal);">45.2K</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">+15% increase</p>
+                </div>
+            </div>
+
+            <!-- Row 2 — Extended Stats -->
+            <div class="grid-4 dashboard-stats-row">
+                <div class="dashboard-card">
+                    <div class="icon">📰</div>
+                    <div class="title">Latest News Stats</div>
+                    <div class="value">2,547</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Total articles live</p>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon">📖</div>
+                    <div class="title">Magazine Issues</div>
+                    <div class="value">18</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Published editions</p>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon">🔔</div>
+                    <div class="title">Notifications</div>
+                    <div class="value">5</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Pending actions</p>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon">📥</div>
+                    <div class="title">Downloads</div>
+                    <div class="value">3.2K</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Magazine downloads</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div>
+                    <h2>📈 Performance Metrics</h2>
+                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: flex-end; justify-content: space-between; height: 220px; gap: 8px; padding: 0 10px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                                <span style="font-size: 11px; font-weight: 600; color: var(--primary); margin-bottom: 6px;">8.2K</span>
+                                <div style="width: 100%; max-width: 40px; height: 82px; background: linear-gradient(180deg, var(--primary), var(--teal)); border-radius: 6px 6px 0 0;"></div>
+                                <span style="font-size: 11px; color: var(--darkGray); margin-top: 8px;">Jan</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                                <span style="font-size: 11px; font-weight: 600; color: var(--primary); margin-bottom: 6px;">12.5K</span>
+                                <div style="width: 100%; max-width: 40px; height: 125px; background: linear-gradient(180deg, var(--primary), var(--teal)); border-radius: 6px 6px 0 0;"></div>
+                                <span style="font-size: 11px; color: var(--darkGray); margin-top: 8px;">Feb</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                                <span style="font-size: 11px; font-weight: 600; color: var(--primary); margin-bottom: 6px;">15.1K</span>
+                                <div style="width: 100%; max-width: 40px; height: 151px; background: linear-gradient(180deg, var(--primary), var(--teal)); border-radius: 6px 6px 0 0;"></div>
+                                <span style="font-size: 11px; color: var(--darkGray); margin-top: 8px;">Mar</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                                <span style="font-size: 11px; font-weight: 600; color: var(--primary); margin-bottom: 6px;">18.7K</span>
+                                <div style="width: 100%; max-width: 40px; height: 187px; background: linear-gradient(180deg, var(--primary), var(--teal)); border-radius: 6px 6px 0 0;"></div>
+                                <span style="font-size: 11px; color: var(--darkGray); margin-top: 8px;">Apr</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                                <span style="font-size: 11px; font-weight: 600; color: var(--primary); margin-bottom: 6px;">22.3K</span>
+                                <div style="width: 100%; max-width: 40px; height: 200px; background: linear-gradient(180deg, var(--primary), var(--teal)); border-radius: 6px 6px 0 0;"></div>
+                                <span style="font-size: 11px; color: var(--darkGray); margin-top: 8px;">May</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                                <span style="font-size: 11px; font-weight: 600; color: #d4af37; margin-bottom: 6px;">45.2K</span>
+                                <div style="width: 100%; max-width: 40px; height: 210px; background: linear-gradient(180deg, #d4af37, var(--primary)); border-radius: 6px 6px 0 0;"></div>
+                                <span style="font-size: 11px; font-weight: 700; color: var(--primary); margin-top: 8px;">Jun</span>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 16px; font-size: 12px; color: var(--darkGray);">Monthly Page Views (2026)</div>
+                    </div>
+                </div>
+                <div>
+                    <h2>🔝 Top Performing Articles</h2>
+                    <div>
+                        <div style="padding: 15px; background: white; border-radius: 6px; margin-bottom: 15px; display: flex; justify-content: space-between;">
+                            <p style="font-weight: 600; flex-grow: 1;">Revolutionary AI Technology</p>
+                            <span style="color: var(--primary); font-weight: bold;">125.4K</span>
+                        </div>
+
+                        <div style="padding: 15px; background: white; border-radius: 6px; margin-bottom: 15px; display: flex; justify-content: space-between;">
+                            <p style="font-weight: 600; flex-grow: 1;">Economic Growth Surpasses Expectations</p>
+                            <span style="color: var(--primary); font-weight: bold;">98.2K</span>
+                        </div>
+
+                        <div style="padding: 15px; background: white; border-radius: 6px; margin-bottom: 15px; display: flex; justify-content: space-between;">
+                            <p style="font-weight: 600; flex-grow: 1;">Champion Wins Historic Olympic Medal</p>
+                            <span style="color: var(--primary); font-weight: bold;">156.8K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 60px;"><span class="section-icon">📊</span>Latest News Statistics</h2>
+            <div class="grid-2" style="margin-top: 20px;">
+                <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 16px; margin-bottom: 15px; color: var(--primary);">Articles by Category</h3>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>Technology</span><span style="font-weight: bold; color: var(--primary);">38 articles</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>Business</span><span style="font-weight: bold; color: var(--primary);">29 articles</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>World News</span><span style="font-weight: bold; color: var(--primary);">24 articles</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                        <span>Sports</span><span style="font-weight: bold; color: var(--primary);">21 articles</span>
+                    </div>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 16px; margin-bottom: 15px; color: var(--teal);">Magazine Statistics</h3>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>Total Issues</span><span style="font-weight: bold; color: var(--teal);">18</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>Total Downloads</span><span style="font-weight: bold; color: var(--teal);">3,210</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>Active Subscribers</span><span style="font-weight: bold; color: var(--teal);">45K+</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                        <span>Best Performing</span><span style="font-weight: bold; color: green;">May 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 60px;"><span class="section-icon">📝</span>Recent Articles</h2>
+            <div class="news-item" style="border-left: 4px solid var(--teal); margin-bottom: 15px;">
+                <div class="news-content">
+                    <h3 style="font-size: 18px;">Article 1 Title</h3>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Published 1 days ago • 130K views</p>
+                    <button type="button" class="read-more" style="margin-top: 10px;">Edit →</button>
+                </div>
+            </div>
+
+            <div class="news-item" style="border-left: 4px solid var(--teal); margin-bottom: 15px;">
+                <div class="news-content">
+                    <h3 style="font-size: 18px;">Article 2 Title</h3>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Published 2 days ago • 110K views</p>
+                    <button type="button" class="read-more" style="margin-top: 10px;">Edit →</button>
+                </div>
+            </div>
+
+            <div class="news-item" style="border-left: 4px solid var(--teal); margin-bottom: 15px;">
+                <div class="news-content">
+                    <h3 style="font-size: 18px;">Article 3 Title</h3>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Published 3 days ago • 90K views</p>
+                    <button type="button" class="read-more" style="margin-top: 10px;">Edit →</button>
+                </div>
+            </div>
+
+            <div class="news-item" style="border-left: 4px solid var(--teal); margin-bottom: 15px;">
+                <div class="news-content">
+                    <h3 style="font-size: 18px;">Article 4 Title</h3>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Published 4 days ago • 70K views</p>
+                    <button type="button" class="read-more" style="margin-top: 10px;">Edit →</button>
+                </div>
+            </div>
+
+            <div style="height: 60px;"></div>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

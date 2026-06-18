@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reader Dashboard - Stackly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="reader-dashboard.html" class="current">Dashboard</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div class="container">
+            <div class="dashboard-header">
+                <div>
+                    <h1 id="dashWelcome">Welcome, Reader!</h1>
+                    <p>Your personalized news dashboard</p>
+                </div>
+                <a href="#" id="signOutBtn" class="btn btn-primary" onclick="event.preventDefault(); Auth.logout();">Sign Out</a>
+            </div>
+
+            <!-- User Info Card -->
+            <div class="profile-card">
+                <div class="profile-card-left">
+                    <div class="profile-avatar" id="dashAvatar"></div>
+                    <div class="profile-name-block">
+                        <h2 class="profile-name" id="dashUserName">—</h2>
+                        <span class="profile-role-badge" id="dashUserRole">—</span>
+                        <span class="profile-status-badge">Active</span>
+                    </div>
+                </div>
+                <div class="profile-card-details">
+                    <div class="profile-detail-item">
+                        <span class="profile-detail-icon">📧</span>
+                        <div>
+                            <span class="profile-detail-label">Email</span>
+                            <span class="profile-detail-value" id="dashUserEmail">—</span>
+                        </div>
+                    </div>
+                    <!--<<div class="profile-detail-item">
+                        <span class="profile-detail-icon">📱</span>
+                        <div>
+                            <span class="profile-detail-label">Mobile</span>
+                            <span class="profile-detail-value" id="dashUserMobile">—</span>
+                        </div>
+                    </div>-->
+                    <!--<div class="profile-detail-item">
+                        <span class="profile-detail-icon">📅</span>
+                        <div>
+                            <span class="profile-detail-label">Member Since</span>
+                            <span class="profile-detail-value" id="dashMemberSince">—</span>
+                        </div>
+                    </div>--->
+                    <div class="profile-detail-item">
+                        <span class="profile-detail-icon">🕐</span>
+                        <div>
+                            <span class="profile-detail-label">Login Time</span>
+                            <span class="profile-detail-value" id="dashLoginTime">—</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 1 — Core Stats -->
+            <div class="grid-4">
+                <div class="dashboard-card">
+                    <div class="icon">💾</div>
+                    <div class="title">Saved Articles</div>
+                    <div class="value">24</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon">⏱️</div>
+                    <div class="title">Reading Time</div>
+                    <div class="value">12.5h</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon">🔔</div>
+                    <div class="title">Notifications</div>
+                    <div class="value">8</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon">📬</div>
+                    <div class="title">Subscriptions</div>
+                    <div class="value">3</div>
+                </div>
+            </div>
+
+            <!-- Row 2 — Extended Stats -->
+            <div class="grid-4 dashboard-stats-row">
+                <div class="dashboard-card" style="border-top-color: var(--primary);">
+                    <div class="icon">📰</div>
+                    <div class="title">Latest News Read</div>
+                    <div class="value" style="color: var(--teal);">47</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">This month</p>
+                </div>
+                <div class="dashboard-card" style="border-top-color: var(--primary);">
+                    <div class="icon">📖</div>
+                    <div class="title">Magazine Issues</div>
+                    <div class="value" style="color: var(--teal);">6</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Read this year</p>
+                </div>
+                <div class="dashboard-card" style="border-top-color: var(--primary);">
+                    <div class="icon">📥</div>
+                    <div class="title">Downloads</div>
+                    <div class="value" style="color: var(--teal);">12</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Articles & editions</p>
+                </div>
+                <div class="dashboard-card" style="border-top-color: var(--primary);">
+                    <div class="icon">🕓</div>
+                    <div class="title">Reading History</div>
+                    <div class="value" style="color: var(--teal);">89</div>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Total articles</p>
+                </div>
+            </div>
+
+            <h2><span class="section-icon">📖</span>Saved Articles</h2>
+            <div class="news-item" style="margin-bottom: 15px;">
+                <div class="news-content">
+                    <h3 style="font-size: 18px;">Saved Article 1</h3>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Last read: 2 days ago</p>
+                    <button type="button" class="read-more" style="margin-top: 10px;">Read →</button>
+                </div>
+            </div>
+
+            <div class="news-item" style="margin-bottom: 15px;">
+                <div class="news-content">
+                    <h3 style="font-size: 18px;">Saved Article 2</h3>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Last read: 4 days ago</p>
+                    <button type="button" class="read-more" style="margin-top: 10px;">Read →</button>
+                </div>
+            </div>
+
+            <div class="news-item" style="margin-bottom: 15px;">
+                <div class="news-content">
+                    <h3 style="font-size: 18px;">Saved Article 3</h3>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Last read: 6 days ago</p>
+                    <button type="button" class="read-more" style="margin-top: 10px;">Read →</button>
+                </div>
+            </div>
+
+            <div class="news-item" style="margin-bottom: 15px;">
+                <div class="news-content">
+                    <h3 style="font-size: 18px;">Saved Article 4</h3>
+                    <p style="font-size: 12px; color: var(--darkGray); margin-top: 5px;">Last read: 8 days ago</p>
+                    <button type="button" class="read-more" style="margin-top: 10px;">Read →</button>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 60px;"><span class="section-icon">🔖</span>Reading History</h2>
+            <div class="news-item" style="border-left: 4px solid var(--primary); margin-bottom: 15px;">
+                <div class="news-content">
+                    <p style="font-weight: 600;">Recently Read Article 1</p>
+                    <p style="font-size: 12px; color: var(--darkGray);">Read on June 19, 2026</p>
+                </div>
+            </div>
+
+            <div class="news-item" style="border-left: 4px solid var(--primary); margin-bottom: 15px;">
+                <div class="news-content">
+                    <p style="font-weight: 600;">Recently Read Article 2</p>
+                    <p style="font-size: 12px; color: var(--darkGray);">Read on June 18, 2026</p>
+                </div>
+            </div>
+
+            <div class="news-item" style="border-left: 4px solid var(--primary); margin-bottom: 15px;">
+                <div class="news-content">
+                    <p style="font-weight: 600;">Recently Read Article 3</p>
+                    <p style="font-size: 12px; color: var(--darkGray);">Read on June 17, 2026</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 60px;"><span class="section-icon">📰</span>Latest News Statistics</h2>
+            <div class="grid-2" style="margin-top: 20px;">
+                <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 16px; margin-bottom: 15px; color: var(--primary);">Top Categories Read</h3>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>Technology</span><span style="font-weight: bold; color: var(--primary);">18 articles</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>Business</span><span style="font-weight: bold; color: var(--primary);">12 articles</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>World News</span><span style="font-weight: bold; color: var(--primary);">9 articles</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                        <span>Sports</span><span style="font-weight: bold; color: var(--primary);">8 articles</span>
+                    </div>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 16px; margin-bottom: 15px; color: var(--teal);">Magazine Statistics</h3>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>Issues Read</span><span style="font-weight: bold; color: var(--teal);">6</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>Issues Downloaded</span><span style="font-weight: bold; color: var(--teal);">4</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <span>Favourite Edition</span><span style="font-weight: bold; color: var(--teal);">May 2026</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                        <span>Subscription Status</span><span style="font-weight: bold; color: green;">Active</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: 60px;"></div>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

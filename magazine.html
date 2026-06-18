@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Magazine - Stackly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="latest.html">Latest News</a>
+                <a href="magazine.html" class="current">Magazine</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="signin.html">Sign In</a>
+                <a href="register.html" class="nav-register">Register</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div style="background-color: var(--primary); color: white; padding: 80px 20px; text-align: center;">
+            <div class="container">
+                <h1 style="font-size: 48px;">Digital Magazine</h1>
+                <p style="font-size: 18px; margin-top: 15px;">Premium stories, curated monthly</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2><span class="section-icon">📕</span>Latest Editions</h2>
+            <div class="grid-3">
+                <div class="article-card">
+                    <img src="images/magazine-1.webp" style="width:100%; height:280px; object-fit:cover;" alt="Future of Technology" loading="lazy" decoding="async" width="400" height="280">
+                    <div class="article-card-content">
+                        <div style="color: var(--primary); font-weight: bold; margin-bottom: 10px;">June 2026</div>
+                        <h3 style="margin-bottom: 15px;">Future of Technology</h3>
+                        <p style="margin-bottom: 15px;">12 Articles</p>
+                        <button type="button" style="width: 100%; background-color: var(--primary); color: white; padding: 10px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">📥 Download Edition</button>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/magazine-2.webp" style="width:100%; height:280px; object-fit:cover;" alt="Global Economics" loading="lazy" decoding="async" width="400" height="280">
+                    <div class="article-card-content">
+                        <div style="color: var(--primary); font-weight: bold; margin-bottom: 10px;">May 2026</div>
+                        <h3 style="margin-bottom: 15px;">Global Economics</h3>
+                        <p style="margin-bottom: 15px;">10 Articles</p>
+                        <button type="button" style="width: 100%; background-color: var(--primary); color: white; padding: 10px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">📥 Download Edition</button>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/magazine-3.webp" style="width:100%; height:280px; object-fit:cover;" alt="Climate Action" loading="lazy" decoding="async" width="400" height="280">
+                    <div class="article-card-content">
+                        <div style="color: var(--primary); font-weight: bold; margin-bottom: 10px;">April 2026</div>
+                        <h3 style="margin-bottom: 15px;">Climate Action</h3>
+                        <p style="margin-bottom: 15px;">15 Articles</p>
+                        <button type="button" style="width: 100%; background-color: var(--primary); color: white; padding: 10px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">📥 Download Edition</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2><span class="section-icon">🌟</span>Featured Stories</h2>
+            <div class="news-item" style="display: flex; gap: 25px; margin-bottom: 20px;">
+                <img src="images/magazine-thumb-1.webp" style="width:120px; height:100px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="Revolutionary AI Technology Reshapes Global Markets" loading="lazy" decoding="async" width="120" height="100">
+                <div class="news-content">
+                    <span style="color: var(--teal); font-weight: bold;">FEATURED</span>
+                    <h3 style="margin-top: 10px; font-size: 18px;"><a href="article.html?id=1" style="color: inherit; text-decoration: none;">Revolutionary AI Technology Reshapes Global Markets</a></h3>
+                    <p style="color: var(--darkGray); font-size: 12px; margin-top: 8px;">From June 2026 Edition • 8 min</p>
+                </div>
+            </div>
+
+            <div class="news-item" style="display: flex; gap: 25px; margin-bottom: 20px;">
+                <img src="images/magazine-thumb-2.webp" style="width:120px; height:100px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="Economic Growth Surpasses Expectations in Q2" loading="lazy" decoding="async" width="120" height="100">
+                <div class="news-content">
+                    <span style="color: var(--teal); font-weight: bold;">FEATURED</span>
+                    <h3 style="margin-top: 10px; font-size: 18px;"><a href="article.html?id=2" style="color: inherit; text-decoration: none;">Economic Growth Surpasses Expectations in Q2</a></h3>
+                    <p style="color: var(--darkGray); font-size: 12px; margin-top: 8px;">From June 2026 Edition • 6 min</p>
+                </div>
+            </div>
+
+            <div class="news-item" style="display: flex; gap: 25px; margin-bottom: 20px;">
+                <img src="images/magazine-thumb-3.webp" style="width:120px; height:100px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="Champion Wins Historic Olympic Medal" loading="lazy" decoding="async" width="120" height="100">
+                <div class="news-content">
+                    <span style="color: var(--teal); font-weight: bold;">FEATURED</span>
+                    <h3 style="margin-top: 10px; font-size: 18px;"><a href="article.html?id=3" style="color: inherit; text-decoration: none;">Champion Wins Historic Olympic Medal</a></h3>
+                    <p style="color: var(--darkGray); font-size: 12px; margin-top: 8px;">From June 2026 Edition • 5 min</p>
+                </div>
+            </div>
+
+            <div class="news-item" style="display: flex; gap: 25px; margin-bottom: 20px;">
+                <img src="images/magazine-thumb-4.webp" style="width:120px; height:100px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="Entertainment Industry Celebrates Major Awards Ceremony" loading="lazy" decoding="async" width="120" height="100">
+                <div class="news-content">
+                    <span style="color: var(--teal); font-weight: bold;">FEATURED</span>
+                    <h3 style="margin-top: 10px; font-size: 18px;"><a href="article.html?id=4" style="color: inherit; text-decoration: none;">Entertainment Industry Celebrates Major Awards Ceremony</a></h3>
+                    <p style="color: var(--darkGray); font-size: 12px; margin-top: 8px;">From June 2026 Edition • 7 min</p>
+                </div>
+            </div>
+
+            <div class="news-item" style="display: flex; gap: 25px; margin-bottom: 20px;">
+                <img src="images/magazine-thumb-5.webp" style="width:120px; height:100px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="Climate Action Summit Produces Historic Agreement" loading="lazy" decoding="async" width="120" height="100">
+                <div class="news-content">
+                    <span style="color: var(--teal); font-weight: bold;">FEATURED</span>
+                    <h3 style="margin-top: 10px; font-size: 18px;"><a href="article.html?id=5" style="color: inherit; text-decoration: none;">Climate Action Summit Produces Historic Agreement</a></h3>
+                    <p style="color: var(--darkGray); font-size: 12px; margin-top: 8px;">From June 2026 Edition • 9 min</p>
+                </div>
+            </div>
+
+            <div class="news-item" style="display: flex; gap: 25px; margin-bottom: 20px;">
+                <img src="images/magazine-thumb-6.webp" style="width:120px; height:100px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="Education Reforms Transform Learning Landscape" loading="lazy" decoding="async" width="120" height="100">
+                <div class="news-content">
+                    <span style="color: var(--teal); font-weight: bold;">FEATURED</span>
+                    <h3 style="margin-top: 10px; font-size: 18px;"><a href="article.html?id=6" style="color: inherit; text-decoration: none;">Education Reforms Transform Learning Landscape</a></h3>
+                    <p style="color: var(--darkGray); font-size: 12px; margin-top: 8px;">From June 2026 Edition • 6 min</p>
+                </div>
+            </div>
+
+            <div class="news-item" style="display: flex; gap: 25px; margin-bottom: 20px;">
+                <img src="images/magazine-thumb-7.webp" style="width:120px; height:100px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="Lifestyle Trends Dominate Summer Season" loading="lazy" decoding="async" width="120" height="100">
+                <div class="news-content">
+                    <span style="color: var(--teal); font-weight: bold;">FEATURED</span>
+                    <h3 style="margin-top: 10px; font-size: 18px;"><a href="article.html?id=7" style="color: inherit; text-decoration: none;">Lifestyle Trends Dominate Summer Season</a></h3>
+                    <p style="color: var(--darkGray); font-size: 12px; margin-top: 8px;">From June 2026 Edition • 5 min</p>
+                </div>
+            </div>
+
+            <div class="news-item" style="display: flex; gap: 25px; margin-bottom: 20px;">
+                <img src="images/magazine-thumb-8.webp" style="width:120px; height:100px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="Political Developments Shape International Relations" loading="lazy" decoding="async" width="120" height="100">
+                <div class="news-content">
+                    <span style="color: var(--teal); font-weight: bold;">FEATURED</span>
+                    <h3 style="margin-top: 10px; font-size: 18px;"><a href="article.html?id=8" style="color: inherit; text-decoration: none;">Political Developments Shape International Relations</a></h3>
+                    <p style="color: var(--darkGray); font-size: 12px; margin-top: 8px;">From June 2026 Edition • 8 min</p>
+                </div>
+            </div>
+
+            <div style="background-color: var(--lightGray); padding: 40px; border-radius: 12px; text-align: center; margin-top: 60px;">
+                <h3 style="font-size: 28px; margin-bottom: 15px;">📬 Subscribe to Our Magazine</h3>
+                <p style="margin-bottom: 25px; font-size: 16px;">Get monthly curated stories delivered to your inbox</p>
+                <button type="button" class="btn btn-primary">Subscribe Now</button>
+            </div>
+        </div>
+    </main>
+
+        <footer>
+        <div class="footer-grid">
+            <div>
+                <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+                <p style="margin-top: 10px; font-size: 14px; opacity: 0.75; max-width: 220px; line-height: 1.6;">India's most trusted News &amp; Magazine network, delivering unbiased journalism and in-depth stories since 2018.</p>
+                <div style="display: flex; gap: 12px; margin-top: 16px;">
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#1877F2'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x66;</a>
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#000'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1D54F;</a>
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#E1306C'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1F4F7;</a>
+                    <!-- <a href="https://www.linkedin.com/company/stackly" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#0A66C2'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1F4BC;</a> -->
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a class="footer-link" href="index.html"><span>Home</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="about.html"><span>About Us</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="categories.html"><span>Categories</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="latest.html"><span>Latest News</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="magazine.html"><span>Magazine</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="blog.html"><span>Blog</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="contact.html"><span>Contact</span><i class="link-arrow">→</i></a>
+            </div>
+            <div class="footer-section">
+                <h3>News &amp; Magazine</h3>
+                <div class="newsroom-link"><span class="newsroom-icon">📰</span><span>Breaking News</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">🔥</span><span>Trending Stories</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">✍️</span><span>Editorial Picks</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📖</span><span>Monthly Magazine</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📡</span><span>Industry Updates</span></div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-item"><span class="contact-icon">📍</span><span>123 News Street, Media City, MC 12345</span></div>
+                <div class="contact-item"><span class="contact-icon">📞</span><span>+1 (555) 123-4567</span></div>
+                <div class="contact-item"><span class="contact-icon">📧</span><a href="mailto:contact@stackly.com" style="color: inherit; text-decoration: none;">contact@stackly.com</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly. All Rights Reserved. | <a href="404.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a> | <a href="404.html" style="color: inherit; text-decoration: underline;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

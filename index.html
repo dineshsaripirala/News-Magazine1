@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Premium News & Magazine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="current">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="latest.html">Latest News</a>
+                <a href="magazine.html">Magazine</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="signin.html">Sign In</a>
+                <a href="register.html" class="nav-register">Register</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div class="hero">
+            <div class="container">
+                <h1>Breaking News & Stories</h1>
+                <p>Stay informed with premium journalism and in-depth analysis from the world's most trusted newsroom</p>
+                <div class="hero-buttons">
+                    <a class="btn btn-primary" href="latest.html">Read Latest News</a>
+                    <a class="btn btn-secondary" href="magazine.html">View Magazine</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="grid-4">
+                <div class="stat-card fade-in-up">
+                    <img src="images/avatar-1.webp" style="width:60px; height:60px; border-radius:50%; margin-bottom:10px; border: 3px solid rgba(37,99,235,0.15);" alt="Articles Published" loading="lazy" decoding="async" width="60" height="60">
+                    <div class="value">2,547</div>
+                    <div style="color: var(--text-muted); font-weight: 500; font-size: 14px;">Articles Published</div>
+                </div>
+                <div class="stat-card fade-in-up">
+                    <img src="images/avatar-2.webp" style="width:60px; height:60px; border-radius:50%; margin-bottom:10px; border: 3px solid rgba(37,99,235,0.15);" alt="Monthly Readers" loading="lazy" decoding="async" width="60" height="60">
+                    <div class="value">150K+</div>
+                    <div style="color: var(--text-muted); font-weight: 500; font-size: 14px;">Monthly Readers</div>
+                </div>
+                <div class="stat-card fade-in-up">
+                    <img src="images/avatar-3.webp" style="width:60px; height:60px; border-radius:50%; margin-bottom:10px; border: 3px solid rgba(37,99,235,0.15);" alt="Active Journalists" loading="lazy" decoding="async" width="60" height="60">
+                    <div class="value">85+</div>
+                    <div style="color: var(--text-muted); font-weight: 500; font-size: 14px;">Active Journalists</div>
+                </div>
+                <div class="stat-card fade-in-up">
+                    <img src="images/avatar-4.webp" style="width:60px; height:60px; border-radius:50%; margin-bottom:10px; border: 3px solid rgba(37,99,235,0.15);" alt="Magazine Subscribers" loading="lazy" decoding="async" width="60" height="60">
+                    <div class="value">45K+</div>
+                    <div style="color: var(--text-muted); font-weight: 500; font-size: 14px;">Magazine Subscribers</div>
+                </div>
+            </div>
+
+            <h2><span class="section-icon">🔥</span>Trending Stories</h2>
+            <div class="grid-3">
+                <div class="article-card">
+                    <img src="images/article-1.webp" style="width:100%; height:200px; object-fit:cover;" alt="Revolutionary AI Technology Reshapes Global Markets" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <div class="article-card-category">Technology</div>
+                        <h3>Revolutionary AI Technology Reshapes Global Markets</h3>
+                        <p>Breaking: New AI breakthrough promises to revolutionize industries...</p>
+                        <div style="font-size: 12px; color: var(--darkGray); margin-bottom: 15px;">
+                            <span>125.4K views</span> • <span>8 min</span>
+                        </div>
+                        <a class="read-more" href="404.html">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/article-2.webp" style="width:100%; height:200px; object-fit:cover;" alt="Economic Growth Surpasses Expectations in Q2" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <div class="article-card-category">Business</div>
+                        <h3>Economic Growth Surpasses Expectations in Q2</h3>
+                        <p>Global economy shows strong recovery with unexpected growth...</p>
+                        <div style="font-size: 12px; color: var(--darkGray); margin-bottom: 15px;">
+                            <span>98.2K views</span> • <span>6 min</span>
+                        </div>
+                        <a class="read-more" href="404.html">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/article-3.webp" style="width:100%; height:200px; object-fit:cover;" alt="Champion Wins Historic Olympic Medal" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <div class="article-card-category">Sports</div>
+                        <h3>Champion Wins Historic Olympic Medal</h3>
+                        <p>Athletic excellence reaches new heights at international games...</p>
+                        <div style="font-size: 12px; color: var(--darkGray); margin-bottom: 15px;">
+                            <span>156.8K views</span> • <span>5 min</span>
+                        </div>
+                        <a class="read-more" href="404.html">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2><span class="section-icon">📊</span>Editor's Picks</h2>
+            <div class="news-item">
+                <img src="images/article-4.webp" style="width:180px; height:140px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="Entertainment Industry Celebrates Major Awards Ceremony" loading="lazy" decoding="async" width="180" height="140">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="category-badge">Entertainment</span>
+                        <span>By Emily Davis</span>
+                    </div>
+                    <h3>Entertainment Industry Celebrates Major Awards Ceremony</h3>
+                    <p>Stars shine bright as prestigious awards recognize outstanding talent...</p>
+                    <div class="news-meta">
+                        <span>June 13, 2026</span>
+                        <a class="read-more" href="404.html">Read Full Story →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <img src="images/article-5.webp" style="width:180px; height:140px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="Climate Action Summit Produces Historic Agreement" loading="lazy" decoding="async" width="180" height="140">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="category-badge">World News</span>
+                        <span>By Robert Wilson</span>
+                    </div>
+                    <h3>Climate Action Summit Produces Historic Agreement</h3>
+                    <p>Nations unite to combat climate change with binding commitment...</p>
+                    <div class="news-meta">
+                        <span>June 12, 2026</span>
+                        <a class="read-more" href="404.html">Read Full Story →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <img src="images/article-6.webp" style="width:180px; height:140px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="Education Reforms Transform Learning Landscape" loading="lazy" decoding="async" width="180" height="140">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="category-badge">Education</span>
+                        <span>By Lisa Anderson</span>
+                    </div>
+                    <h3>Education Reforms Transform Learning Landscape</h3>
+                    <p>New educational policies promise improved student outcomes...</p>
+                    <div class="news-meta">
+                        <span>June 11, 2026</span>
+                        <a class="read-more" href="404.html">Read Full Story →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--<h2><span class="section-icon">⭐</span>Reader Testimonials</h2>
+            <!--<div class="grid-3">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Stackly provides the most accurate and in-depth journalism. Highly recommended!"</p>
+                    <p style="font-weight: bold; margin-top: 15px;">Sarah Mitchell</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"I rely on Stackly for all my news. The writing quality is exceptional."</p>
+                    <p style="font-weight: bold; margin-top: 15px;">James Rodriguez</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Best digital magazine I've subscribed to. Worth every penny!"</p>
+                    <p style="font-weight: bold; margin-top: 15px;">Emma Wilson</p>
+                </div>
+            </div>--->
+
+            <!-- ── Explore Categories ─────────────────────────────────── -->
+            <h2><span class="section-icon">📂</span>Explore Categories</h2>
+            <div class="grid-4">
+                <div class="article-card fade-in-up">
+                    <img src="images/category-technology.webp" style="width:100%; height:140px; object-fit:cover;" alt="Technology" loading="lazy" decoding="async" width="400" height="140">
+                    <div class="article-card-content" style="padding:16px 20px;">
+                        <h3 style="margin:0 0 4px 0;">Technology</h3>
+                        <p style="margin:0;font-size:13px;">AI, startups & innovation</p>
+                    </div>
+                </div>
+                <div class="article-card fade-in-up">
+                    <img src="images/category-business.webp" style="width:100%; height:140px; object-fit:cover;" alt="Business" loading="lazy" decoding="async" width="400" height="140">
+                    <div class="article-card-content" style="padding:16px 20px;">
+                        <h3 style="margin:0 0 4px 0;">Business</h3>
+                        <p style="margin:0;font-size:13px;">Markets, economy & finance</p>
+                    </div>
+                </div>
+                <div class="article-card fade-in-up">
+                    <img src="images/category-sports.webp" style="width:100%; height:140px; object-fit:cover;" alt="Sports" loading="lazy" decoding="async" width="400" height="140">
+                    <div class="article-card-content" style="padding:16px 20px;">
+                        <h3 style="margin:0 0 4px 0;">Sports</h3>
+                        <p style="margin:0;font-size:13px;">Live scores & match reports</p>
+                    </div>
+                </div>
+                <div class="article-card fade-in-up">
+                    <img src="images/category-entertainment.webp" style="width:100%; height:140px; object-fit:cover;" alt="Entertainment" loading="lazy" decoding="async" width="400" height="140">
+                    <div class="article-card-content" style="padding:16px 20px;">
+                        <h3 style="margin:0 0 4px 0;">Entertainment</h3>
+                        <p style="margin:0;font-size:13px;">Movies, music & culture</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Latest Magazine Edition ─────────────────────────────── -->
+            <h2><span class="section-icon">📖</span>Latest Magazine Edition</h2>
+            <div class="grid-2" style="margin-top:30px;">
+                <div style="border-radius:16px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,0.1);">
+                    <img src="images/magazine-cover.webp" style="width:100%; height:360px; object-fit:cover;" alt="June 2026 Magazine — Future of Technology" loading="lazy" decoding="async" width="800" height="360">
+                </div>
+                <div style="display:flex; flex-direction:column; justify-content:center; gap:16px;">
+                    <span class="category-badge" style="width:fit-content;">June 2026</span>
+                    <h3 style="font-size:28px; font-weight:800; color:var(--primary); line-height:1.3;">Future of Technology</h3>
+                    <p style="color:var(--text-muted); line-height:1.8; font-size:15px;">This month's edition dives deep into the transformative power of AI, next-generation computing, and the innovators shaping tomorrow's industries. Featuring exclusive interviews, expert analysis, and forecasts you won't find anywhere else.</p>
+                    <div style="display:flex; gap:24px; color:var(--text-muted); font-size:14px;">
+                        <span>12 Articles</span>
+                        <span>45 min read</span>
+                        <span>3.2K downloads</span>
+                    </div>
+                    <div style="display:flex; gap:12px; margin-top:8px;">
+                        <a href="magazine.html" class="btn btn-primary" style="padding:12px 28px; font-size:14px;">Read Magazine</a>
+                        <a href="404.html" class="btn btn-secondary" style="padding:12px 28px; font-size:14px; border-color:var(--border); color:var(--primary);">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Why Stackly ─────────────────────────────────────────── -->
+            <h2 style="text-align:center; margin-top:80px;"><span class="section-icon">💎</span>Why Choose Stackly</h2>
+            <p style="text-align:center; color:var(--text-muted); max-width:600px; margin:0 auto 40px; font-size:16px; line-height:1.7;">We combine editorial excellence with cutting-edge technology to bring you the most reliable, comprehensive, and engaging news experience.</p>
+            <div class="grid-3">
+                <div class="stat-card fade-in-up" style="text-align:left; padding:32px;">
+                    <div style="font-size:36px; margin-bottom:16px;">📡</div>
+                    <h3 style="font-size:18px; font-weight:700; color:var(--primary); margin-bottom:10px;">24/7 Live Coverage</h3>
+                    <p style="color:var(--text-muted); font-size:14px; line-height:1.7;">Our global network of journalists delivers real-time breaking news from every corner of the world, around the clock.</p>
+                </div>
+                <div class="stat-card fade-in-up" style="text-align:left; padding:32px;">
+                    <div style="font-size:36px; margin-bottom:16px;">🔍</div>
+                    <h3 style="font-size:18px; font-weight:700; color:var(--primary); margin-bottom:10px;">In-Depth Analysis</h3>
+                    <p style="color:var(--text-muted); font-size:14px; line-height:1.7;">Go beyond headlines with long-form investigations, expert commentary, and data-driven stories that provide real context.</p>
+                </div>
+                <div class="stat-card fade-in-up" style="text-align:left; padding:32px;">
+                    <div style="font-size:36px; margin-bottom:16px;">🤖</div>
+                    <h3 style="font-size:18px; font-weight:700; color:var(--primary); margin-bottom:10px;">AI-Powered Personalization</h3>
+                    <p style="color:var(--text-muted); font-size:14px; line-height:1.7;">Smart algorithms learn your interests and curate a personalized feed so you never miss stories that matter to you.</p>
+                </div>
+                <div class="stat-card fade-in-up" style="text-align:left; padding:32px;">
+                    <div style="font-size:36px; margin-bottom:16px;">📱</div>
+                    <h3 style="font-size:18px; font-weight:700; color:var(--primary); margin-bottom:10px;">Read Anywhere</h3>
+                    <p style="color:var(--text-muted); font-size:14px; line-height:1.7;">Seamless experience across desktop, tablet, and mobile. Download editions for offline reading on planes and commutes.</p>
+                </div>
+                <div class="stat-card fade-in-up" style="text-align:left; padding:32px;">
+                    <div style="font-size:36px; margin-bottom:16px;">🛡️</div>
+                    <h3 style="font-size:18px; font-weight:700; color:var(--primary); margin-bottom:10px;">Fact-Checked & Trusted</h3>
+                    <p style="color:var(--text-muted); font-size:14px; line-height:1.7;">Every story goes through rigorous multi-layer fact-checking. Our editorial integrity is our most valued asset.</p>
+                </div>
+                <div class="stat-card fade-in-up" style="text-align:left; padding:32px;">
+                    <div style="font-size:36px; margin-bottom:16px;">🏆</div>
+                    <h3 style="font-size:18px; font-weight:700; color:var(--primary); margin-bottom:10px;">Award-Winning Journalism</h3>
+                    <p style="color:var(--text-muted); font-size:14px; line-height:1.7;">Recognized with 15+ international journalism awards for excellence in reporting, digital innovation, and editorial quality.</p>
+                </div>
+            </div>
+
+            <!-- ── More Top Stories ─────────────────────────────────────── -->
+            <h2><span class="section-icon">📰</span>More Top Stories</h2>
+            <div class="grid-3">
+                <div class="article-card fade-in-up">
+                    <img src="images/article-7.webp" style="width:100%; height:200px; object-fit:cover;" alt="Lifestyle Trends Dominate Summer Season" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <div class="article-card-category">Lifestyle</div>
+                        <h3>Lifestyle Trends Dominate Summer Season</h3>
+                        <p>Fashion and wellness experts reveal must-have trends for the summer...</p>
+                        <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">
+                            <span>94.7K views</span> • <span>5 min</span>
+                        </div>
+                        <a class="read-more" href="404.html">Read More →</a>
+                    </div>
+                </div>
+                <div class="article-card fade-in-up">
+                    <img src="images/article-8.webp" style="width:100%; height:200px; object-fit:cover;" alt="Political Developments Shape International Relations" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <div class="article-card-category">Politics</div>
+                        <h3>Political Developments Shape International Relations</h3>
+                        <p>Major policy shifts influence global diplomatic landscape...</p>
+                        <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">
+                            <span>103.2K views</span> • <span>8 min</span>
+                        </div>
+                        <a class="read-more" href="404.html">Read More →</a>
+                    </div>
+                </div>
+                <div class="article-card fade-in-up">
+                    <img src="images/category-world-news.webp" style="width:100%; height:200px; object-fit:cover;" alt="Global Supply Chains Adapt to New Trade Policies" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <div class="article-card-category">World News</div>
+                        <h3>Global Supply Chains Adapt to New Trade Policies</h3>
+                        <p>International commerce shifts as governments renegotiate key trade agreements...</p>
+                        <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">
+                            <span>87.1K views</span> • <span>7 min</span>
+                        </div>
+                        <a class="read-more" href="404.html">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2><span class="section-icon">⭐</span>Reader Testimonials</h2>
+            <div class="grid-3">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Stackly provides the most accurate and in-depth journalism. Highly recommended!"</p>
+                    <p style="font-weight: bold; margin-top: 15px;">Sarah Mitchell</p>
+                    <p style="font-size:12px; color:var(--text-muted);">Marketing Director</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"I rely on Stackly for all my news. The writing quality is exceptional."</p>
+                    <p style="font-weight: bold; margin-top: 15px;">James Rodriguez</p>
+                    <p style="font-size:12px; color:var(--text-muted);">Software Engineer</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Best digital magazine I've subscribed to. Worth every penny!"</p>
+                    <p style="font-weight: bold; margin-top: 15px;">Emma Wilson</p>
+                    <p style="font-size:12px; color:var(--text-muted);">Entrepreneur</p>
+                </div>
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The personalized feed saves me so much time. I only see stories I actually care about."</p>
+                    <p style="font-weight: bold; margin-top: 15px;">David Chen</p>
+                    <p style="font-size:12px; color:var(--text-muted);">Data Analyst</p>
+                </div>
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Stackly's investigative pieces are on another level. Real journalism at its finest."</p>
+                    <p style="font-weight: bold; margin-top: 15px;">Priya Sharma</p>
+                    <p style="font-size:12px; color:var(--text-muted);">University Professor</p>
+                </div>
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The offline reading feature is a game-changer for my daily commute."</p>
+                    <p style="font-weight: bold; margin-top: 15px;">Michael Torres</p>
+                    <p style="font-size:12px; color:var(--text-muted);">Financial Consultant</p>
+                </div>
+            </div>
+
+            <h2><span class="section-icon">❓</span>Frequently Asked Questions</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-card fade-in-up">
+                    <p class="faq-question">How often is content updated?</p>
+                    <p>We update our news coverage 24/7 with breaking stories and in-depth analysis throughout the day.</p>
+                </div>
+                <div class="faq-card fade-in-up">
+                    <p class="faq-question">Can I save articles for later?</p>
+                    <p>Yes! Premium members can save unlimited articles and access them anytime from their dashboard.</p>
+                </div>
+                <div class="faq-card fade-in-up">
+                    <p class="faq-question">Is content available offline?</p>
+                    <p>Premium subscribers can download articles and magazine editions to read offline.</p>
+                </div>
+                <div class="faq-card fade-in-up">
+                    <p class="faq-question">How do I subscribe to the magazine?</p>
+                    <p>Visit our Magazine page to explore subscription options and special offers.</p>
+                </div>
+                <div class="faq-card fade-in-up">
+                    <p class="faq-question">Is Stackly free to use?</p>
+                    <p>Basic access is free. Premium plans unlock unlimited articles, magazine downloads, ad-free reading, and AI-powered recommendations.</p>
+                </div>
+                <div class="faq-card fade-in-up">
+                    <p class="faq-question">Can I contribute as a journalist?</p>
+                    <p>Absolutely! Register as a Journalist or Editor to submit articles, pitch stories, and join our growing editorial team.</p>
+                </div>
+            </div>
+
+            <!-- ── Newsletter CTA Banner ───────────────────────────────── -->
+            <!--<div style="background: linear-gradient(135deg, var(--primary), #1E293B); border-radius:20px; padding:60px 40px; text-align:center; margin:80px 0 20px; position:relative; overflow:hidden;">
+                <div style="position:absolute; inset:0; background:url('images/hero-bg.webp') center/cover no-repeat; opacity:0.06;"></div>
+                <div style="position:relative; z-index:1;">
+                    <h2 style="color:white; font-size:32px; margin:0 0 12px 0;">Stay Ahead of the News</h2>
+                    <p style="color:rgba(255,255,255,0.7); font-size:16px; max-width:500px; margin:0 auto 28px; line-height:1.7;">Get the day's biggest stories, editor's picks, and exclusive magazine previews delivered straight to your inbox every morning.</p>
+                    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; max-width:480px; margin:0 auto;">
+                        <input type="email" placeholder="Enter your email address" style="flex:1; min-width:220px; padding:14px 20px; border:1.5px solid rgba(255,255,255,0.2); border-radius:10px; background:rgba(255,255,255,0.08); color:white; font-size:15px;">
+                        <button type="button" class="btn btn-primary" style="padding:14px 32px; white-space:nowrap;">Subscribe Free</button>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.4); font-size:12px; margin-top:14px;">Join 45,000+ subscribers. Unsubscribe anytime.</p>
+                </div>
+            </div>-->
+
+            <!-- ── Trusted By / Partners Strip ─────────────────────────── -->
+            <!--<div style="text-align:center; margin:60px 0 20px;">
+                <p style="color:var(--text-muted); font-size:13px; text-transform:uppercase; letter-spacing:2px; font-weight:600; margin-bottom:28px;">Trusted by readers at leading organizations</p>
+                <div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:40px; opacity:0.35;">
+                    <span style="font-size:22px; font-weight:800; color:var(--primary); letter-spacing:1px;">Google</span>
+                    <span style="font-size:22px; font-weight:800; color:var(--primary); letter-spacing:1px;">Microsoft</span>
+                    <span style="font-size:22px; font-weight:800; color:var(--primary); letter-spacing:1px;">Amazon</span>
+                    <span style="font-size:22px; font-weight:800; color:var(--primary); letter-spacing:1px;">Meta</span>
+                    <span style="font-size:22px; font-weight:800; color:var(--primary); letter-spacing:1px;">Apple</span>
+                    <span style="font-size:22px; font-weight:800; color:var(--primary); letter-spacing:1px;">Netflix</span>
+                </div>
+            </div>-->
+        </div>
+    </main>
+
+        <footer>
+        <div class="footer-grid">
+            <div>
+                <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+                <p style="margin-top: 10px; font-size: 14px; opacity: 0.75; max-width: 220px; line-height: 1.6;">India's most trusted News &amp; Magazine network, delivering unbiased journalism and in-depth stories since 2018.</p>
+                <div style="display: flex; gap: 12px; margin-top: 16px;">
+                    <a href="404.html" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#1877F2'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x66;</a>
+                    <a href="404.html" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#000'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1D54F;</a>
+                    <a href="404.html" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#E1306C'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1F4F7;</a>
+                    <!-- <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#0A66C2'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1F4BC;</a> -->
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a class="footer-link" href="index.html"><span>Home</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="about.html"><span>About Us</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="categories.html"><span>Categories</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="latest.html"><span>Latest News</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="magazine.html"><span>Magazine</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="blog.html"><span>Blog</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="contact.html"><span>Contact</span><i class="link-arrow">→</i></a>
+            </div>
+            <div class="footer-section">
+                <h3>News &amp; Magazine</h3>
+                <div class="newsroom-link"><span class="newsroom-icon">📰</span><span>Breaking News</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">🔥</span><span>Trending Stories</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">✍️</span><span>Editorial Picks</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📖</span><span>Monthly Magazine</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📡</span><span>Industry Updates</span></div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-item"><span class="contact-icon">📍</span><span>123 News Street, Media City, MC 12345</span></div>
+                <div class="contact-item"><span class="contact-icon">📞</span><span>+1 (555) 123-4567</span></div>
+                <div class="contact-item"><span class="contact-icon">📧</span><a href="mailto:contact@stackly.com" style="color: inherit; text-decoration: none;">contact@stackly.com</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly. All Rights Reserved. | <a href="404.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a> | <a href="404.html" style="color: inherit; text-decoration: underline;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

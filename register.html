@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Stackly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="latest.html">Latest News</a>
+                <a href="magazine.html">Magazine</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="signin.html">Sign In</a>
+                <a href="register.html" class="nav-register current">Register</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div class="auth-layout">
+            <button class="back-btn" onclick="history.back()">← Back</button>
+
+            <div class="auth-brand">
+                <a href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:72px;width:auto;"></a>
+                <p class="auth-tagline"></p>
+            </div>
+
+            <div class="auth-form-panel">
+                <form class="signin-form" id="registerForm" novalidate>
+                    <h1>Create Account</h1>
+
+                    <div class="form-group">
+                        <input type="text" id="fullName" placeholder="Full Name" autocomplete="name">
+                        <div class="error-message" id="fullNameError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Id" autocomplete="email">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="mobile" placeholder="Mobile Number (10 digits)" autocomplete="tel">
+                        <div class="error-message" id="mobileError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="role">
+                            <option value="">Select Role</option>
+                            <option value="Reader">Reader</option>
+                            <!--<option value="Contributor">Contributor</option>
+                            <option value="Reviewer">Reviewer</option>
+                            <option value="Analyst">Analyst</option>
+                            <option value="Journalist">Journalist</option>-->
+                            <option value="Editor">Editor</option>
+                            <!--<option value="Moderator">Moderator</option>
+                            <option value="Publisher">Publisher</option>
+                            <option value="Admin">Admin</option>-->
+                        </select>
+                        <div class="error-message" id="roleError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password (8+ chars, 1 uppercase, 1 number)" autocomplete="new-password">
+                        <div class="error-message" id="passwordError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" autocomplete="new-password">
+                        <div class="error-message" id="confirmPasswordError"></div>
+                    </div>
+
+                    <div class="auth-btn-group">
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                        <a href="signin.html" class="btn btn-secondary">Sign In</a>
+                    </div>
+                </form>
+
+                <!-- Success State -->
+                <div class="register-success" id="registerSuccess">
+                    <div class="success-icon">✅</div>
+                    <h2>Account Created!</h2>
+                    <p>Your account has been created successfully.</p>
+                    <a href="signin.html" class="btn btn-primary" style="display: inline-block; margin-top: 20px; padding: 12px 32px;">Go To Sign In</a>
+                    <p class="countdown-text">Redirecting to Sign In in <span id="countdown">5</span>s...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

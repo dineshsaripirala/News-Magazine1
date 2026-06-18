@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Stackly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="latest.html">Latest News</a>
+                <a href="magazine.html">Magazine</a>
+                <a href="blog.html" class="current">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="signin.html">Sign In</a>
+                <a href="register.html" class="nav-register">Register</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div style="background-color: var(--teal); color: white; padding: 60px 20px; text-align: center;">
+            <div class="container">
+                <h1>Blog</h1>
+                <p style="font-size: 18px; margin-top: 15px;">Editorial insights, opinion pieces, and industry analysis</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2><span class="section-icon">📝</span>Latest Articles</h2>
+            <div class="grid-3">
+                <div class="article-card">
+                    <img src="images/article-1.webp" style="width:100%; height:200px; object-fit:cover;" alt="Revolutionary AI Technology Reshapes Global Markets" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Technology</span>
+                        <h3>Revolutionary AI Technology Reshapes Global Markets</h3>
+                        <div style="display: flex; gap: 10px; font-size: 12px; color: var(--darkGray); margin-bottom: 15px;">
+                            <span>By John Smith</span>
+                            <span>•</span>
+                            <span>June 16, 2026</span>
+                        </div>
+                        <p>Breaking: New AI breakthrough promises to revolutionize industries...</p>
+                        <a class="read-more" href="404.html">Read →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/article-2.webp" style="width:100%; height:200px; object-fit:cover;" alt="Economic Growth Surpasses Expectations in Q2" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Business</span>
+                        <h3>Economic Growth Surpasses Expectations in Q2</h3>
+                        <div style="display: flex; gap: 10px; font-size: 12px; color: var(--darkGray); margin-bottom: 15px;">
+                            <span>By Sarah Johnson</span>
+                            <span>•</span>
+                            <span>June 15, 2026</span>
+                        </div>
+                        <p>Global economy shows strong recovery with unexpected growth...</p>
+                        <a class="read-more" href="404.html">Read →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/article-3.webp" style="width:100%; height:200px; object-fit:cover;" alt="Champion Wins Historic Olympic Medal" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Sports</span>
+                        <h3>Champion Wins Historic Olympic Medal</h3>
+                        <div style="display: flex; gap: 10px; font-size: 12px; color: var(--darkGray); margin-bottom: 15px;">
+                            <span>By Mike Turner</span>
+                            <span>•</span>
+                            <span>June 14, 2026</span>
+                        </div>
+                        <p>Athletic excellence reaches new heights at international games...</p>
+                        <a class="read-more" href="404.html">Read →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/article-4.webp" style="width:100%; height:200px; object-fit:cover;" alt="Entertainment Industry Celebrates Major Awards Ceremony" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Entertainment</span>
+                        <h3>Entertainment Industry Celebrates Major Awards Ceremony</h3>
+                        <div style="display: flex; gap: 10px; font-size: 12px; color: var(--darkGray); margin-bottom: 15px;">
+                            <span>By Emily Davis</span>
+                            <span>•</span>
+                            <span>June 13, 2026</span>
+                        </div>
+                        <p>Stars shine bright as prestigious awards recognize outstanding talent...</p>
+                        <a class="read-more" href="404.html">Read →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/article-5.webp" style="width:100%; height:200px; object-fit:cover;" alt="Climate Action Summit Produces Historic Agreement" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <span class="article-card-category">World News</span>
+                        <h3>Climate Action Summit Produces Historic Agreement</h3>
+                        <div style="display: flex; gap: 10px; font-size: 12px; color: var(--darkGray); margin-bottom: 15px;">
+                            <span>By Robert Wilson</span>
+                            <span>•</span>
+                            <span>June 12, 2026</span>
+                        </div>
+                        <p>Nations unite to combat climate change with binding commitment...</p>
+                        <a class="read-more" href="404.html">Read →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/article-6.webp" style="width:100%; height:200px; object-fit:cover;" alt="Education Reforms Transform Learning Landscape" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Education</span>
+                        <h3>Education Reforms Transform Learning Landscape</h3>
+                        <div style="display: flex; gap: 10px; font-size: 12px; color: var(--darkGray); margin-bottom: 15px;">
+                            <span>By Lisa Anderson</span>
+                            <span>•</span>
+                            <span>June 11, 2026</span>
+                        </div>
+                        <p>New educational policies promise improved student outcomes...</p>
+                        <a class="read-more" href="404.html">Read →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/article-7.webp" style="width:100%; height:200px; object-fit:cover;" alt="Lifestyle Trends Dominate Summer Season" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Lifestyle</span>
+                        <h3>Lifestyle Trends Dominate Summer Season</h3>
+                        <div style="display: flex; gap: 10px; font-size: 12px; color: var(--darkGray); margin-bottom: 15px;">
+                            <span>By Jessica Lee</span>
+                            <span>•</span>
+                            <span>June 10, 2026</span>
+                        </div>
+                        <p>Fashion and wellness experts reveal must-have trends for season...</p>
+                        <a class="read-more" href="404.html">Read →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/article-8.webp" style="width:100%; height:200px; object-fit:cover;" alt="Political Developments Shape International Relations" loading="lazy" decoding="async" width="600" height="200">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Politics</span>
+                        <h3>Political Developments Shape International Relations</h3>
+                        <div style="display: flex; gap: 10px; font-size: 12px; color: var(--darkGray); margin-bottom: 15px;">
+                            <span>By David Chen</span>
+                            <span>•</span>
+                            <span>June 9, 2026</span>
+                        </div>
+                        <p>Major policy shifts influence global diplomatic landscape...</p>
+                        <a class="read-more" href="404.html">Read →</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2><span class="section-icon">✍️</span>Guest Columns</h2>
+            <div class="news-item" style="border-left: 4px solid var(--teal); margin-bottom: 20px;">
+                <div class="news-content">
+                    <p style="color: var(--primary); font-weight: bold;">GUEST COLUMN</p>
+                    <h3 style="margin-top: 10px;">Expert Perspective: Future of Digital Media</h3>
+                    <p style="color: var(--darkGray); font-size: 14px; margin-top: 10px;">By Industry Expert • June 15, 2026</p>
+                    <p style="margin-top: 15px;">Deep insights into the evolving landscape of digital journalism and media consumption...</p>
+                    <button type="button" class="read-more">Read Full Column →</button>
+                </div>
+            </div>
+
+            <div class="news-item" style="border-left: 4px solid var(--teal); margin-bottom: 20px;">
+                <div class="news-content">
+                    <p style="color: var(--primary); font-weight: bold;">GUEST COLUMN</p>
+                    <h3 style="margin-top: 10px;">Expert Perspective: Future of Digital Media</h3>
+                    <p style="color: var(--darkGray); font-size: 14px; margin-top: 10px;">By Industry Expert • June 14, 2026</p>
+                    <p style="margin-top: 15px;">Deep insights into the evolving landscape of digital journalism and media consumption...</p>
+                    <button type="button" class="read-more">Read Full Column →</button>
+                </div>
+            </div>
+
+            <div class="news-item" style="border-left: 4px solid var(--teal); margin-bottom: 20px;">
+                <div class="news-content">
+                    <p style="color: var(--primary); font-weight: bold;">GUEST COLUMN</p>
+                    <h3 style="margin-top: 10px;">Expert Perspective: Future of Digital Media</h3>
+                    <p style="color: var(--darkGray); font-size: 14px; margin-top: 10px;">By Industry Expert • June 13, 2026</p>
+                    <p style="margin-top: 15px;">Deep insights into the evolving landscape of digital journalism and media consumption...</p>
+                    <button type="button" class="read-more">Read Full Column →</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <footer>
+        <div class="footer-grid">
+            <div>
+                <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+                <p style="margin-top: 10px; font-size: 14px; opacity: 0.75; max-width: 220px; line-height: 1.6;">India's most trusted News &amp; Magazine network, delivering unbiased journalism and in-depth stories since 2018.</p>
+                <div style="display: flex; gap: 12px; margin-top: 16px;">
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#1877F2'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x66;</a>
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#000'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1D54F;</a>
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#E1306C'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1F4F7;</a>
+                    <!-- <a href="https://www.linkedin.com/company/stackly" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#0A66C2'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1F4BC;</a> -->
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a class="footer-link" href="index.html"><span>Home</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="about.html"><span>About Us</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="categories.html"><span>Categories</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="latest.html"><span>Latest News</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="magazine.html"><span>Magazine</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="blog.html"><span>Blog</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="contact.html"><span>Contact</span><i class="link-arrow">→</i></a>
+            </div>
+            <div class="footer-section">
+                <h3>News &amp; Magazine</h3>
+                <div class="newsroom-link"><span class="newsroom-icon">📰</span><span>Breaking News</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">🔥</span><span>Trending Stories</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">✍️</span><span>Editorial Picks</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📖</span><span>Monthly Magazine</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📡</span><span>Industry Updates</span></div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-item"><span class="contact-icon">📍</span><span>123 News Street, Media City, MC 12345</span></div>
+                <div class="contact-item"><span class="contact-icon">📞</span><span>+1 (555) 123-4567</span></div>
+                <div class="contact-item"><span class="contact-icon">📧</span><a href="mailto:contact@stackly.com" style="color: inherit; text-decoration: none;">contact@stackly.com</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly. All Rights Reserved. | <a href="404.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a> | <a href="404.html" style="color: inherit; text-decoration: underline;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

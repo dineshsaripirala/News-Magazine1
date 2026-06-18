@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - Stackly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html" class="current">Categories</a>
+                <a href="latest.html">Latest News</a>
+                <a href="magazine.html">Magazine</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="signin.html">Sign In</a>
+                <a href="register.html" class="nav-register">Register</a>
+            </div>
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div style="background-color: var(--teal); color: white; padding: 60px 20px;">
+            <div class="container">
+                <a href="categories.html" style="color: white; font-weight: 600; text-decoration: none; display: inline-block; margin-bottom: 20px;">← Back</a>
+                <h1 id="categoryName"></h1>
+                <p id="categorySubtitle" style="font-size: 18px; margin-top: 10px;"></p>
+            </div>
+        </div>
+
+        <div class="container" id="categoryArticles"></div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+                <p style="margin-top: 10px; font-size: 14px; opacity: 0.75; max-width: 220px; line-height: 1.6;">India's most trusted News &amp; Magazine network, delivering unbiased journalism and in-depth stories since 2018.</p>
+                <div style="display: flex; gap: 12px; margin-top: 16px;">
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#1877F2'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x66;</a>
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#000'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1D54F;</a>
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#E1306C'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1F4F7;</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a class="footer-link" href="index.html"><span>Home</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="about.html"><span>About Us</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="categories.html"><span>Categories</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="latest.html"><span>Latest News</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="magazine.html"><span>Magazine</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="blog.html"><span>Blog</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="contact.html"><span>Contact</span><i class="link-arrow">→</i></a>
+            </div>
+            <div class="footer-section">
+                <h3>News &amp; Magazine</h3>
+                <div class="newsroom-link"><span class="newsroom-icon">📰</span><span>Breaking News</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">🔥</span><span>Trending Stories</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">✍️</span><span>Editorial Picks</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📖</span><span>Monthly Magazine</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📡</span><span>Industry Updates</span></div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-item"><span class="contact-icon">📍</span><span>123 News Street, Media City, MC 12345</span></div>
+                <div class="contact-item"><span class="contact-icon">📞</span><span>+1 (555) 123-4567</span></div>
+                <div class="contact-item"><span class="contact-icon">📧</span><a href="mailto:contact@stackly.com" style="color: inherit; text-decoration: none;">contact@stackly.com</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly. All Rights Reserved. | <a href="404.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a> | <a href="404.html" style="color: inherit; text-decoration: underline;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const CATEGORIES = {
+            business:      { name: "Business",       articleId: 2, image: "images/article-2.webp", blurb: "Global economy shows strong recovery with unexpected growth...",             author: "By Sarah Johnson", date: "June 15, 2026", views: "98.2K views" },
+            education:     { name: "Education",      articleId: 6, image: "images/article-6.webp", blurb: "New educational policies promise improved student outcomes...",              author: "By Lisa Anderson", date: "June 11, 2026", views: "76.4K views" },
+            entertainment: { name: "Entertainment",  articleId: 4, image: "images/article-4.webp", blurb: "Stars and celebrities gather for the biggest night in showbiz...",          author: "By Emily Davis",   date: "June 13, 2026", views: "87.5K views" },
+            lifestyle:     { name: "Lifestyle",      articleId: 7, image: "images/article-7.webp", blurb: "Top wellness and fashion trends reshaping how we live...",                  author: "By Jessica Lee",   date: "June 10, 2026", views: "94.7K views" },
+            politics:      { name: "Politics",       articleId: 8, image: "images/article-8.webp", blurb: "Major policy shifts influence global diplomatic landscape...",              author: "By David Chen",    date: "June 9, 2026",  views: "103.2K views" },
+            sports:        { name: "Sports",         articleId: 3, image: "images/article-3.webp", blurb: "Athletic excellence and record-breaking moments this season...",            author: "By Mike Turner",   date: "June 14, 2026", views: "156.8K views" },
+            technology:    { name: "Technology",     articleId: 1, image: "images/article-1.webp", blurb: "Breakthroughs in AI and computing continue to reshape industries...",       author: "By John Smith",    date: "June 16, 2026", views: "125.4K views" },
+            "world-news":  { name: "World News",     articleId: 5, image: "images/article-5.webp", blurb: "Global leaders unite for landmark climate and geopolitical deals...",       author: "By Robert Wilson", date: "June 12, 2026", views: "112.3K views" }
+        };
+
+        const ARTICLE_TITLES = {
+            1: "Revolutionary AI Technology Reshapes Global Markets",
+            2: "Economic Growth Surpasses Expectations in Q2",
+            3: "Champion Wins Historic Olympic Medal",
+            4: "Entertainment Industry Celebrates Major Awards Ceremony",
+            5: "Climate Action Summit Produces Historic Agreement",
+            6: "Education Reforms Transform Learning Landscape",
+            7: "Lifestyle Trends Dominate Summer Season",
+            8: "Political Developments Shape International Relations"
+        };
+
+        const name = new URLSearchParams(window.location.search).get('name');
+        const cat  = CATEGORIES[name];
+
+        if (!cat) {
+            window.location.href = '404.html';
+        } else {
+            document.title = cat.name + ' - Stackly';
+            document.getElementById('categoryName').textContent     = cat.name;
+            document.getElementById('categorySubtitle').textContent = 'All stories from ' + cat.name;
+
+            const title = ARTICLE_TITLES[cat.articleId];
+            document.getElementById('categoryArticles').innerHTML = `
+                <div class="news-item" style="border-left: 4px solid var(--primary); margin-bottom: 30px;">
+                    <img src="${cat.image}" style="width:180px; height:140px; border-radius:8px; object-fit:cover; flex-shrink:0;" alt="${title}" loading="lazy" decoding="async" width="180" height="140">
+                    <div class="news-content">
+                        <h3><a href="article.html?id=${cat.articleId}" style="color: inherit; text-decoration: none;">${title}</a></h3>
+                        <p>${cat.blurb}</p>
+                        <div class="news-meta">
+                            <span>${cat.author}</span>
+                            <span>${cat.date}</span>
+                            <span>${cat.views}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

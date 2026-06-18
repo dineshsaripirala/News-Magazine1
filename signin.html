@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Stackly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="latest.html">Latest News</a>
+                <a href="magazine.html">Magazine</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="signin.html" class="current">Sign In</a>
+                <a href="register.html" class="nav-register">Register</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div class="auth-layout">
+            <button class="back-btn" onclick="history.back()">← Back</button>
+
+            <div class="auth-brand">
+                <a href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:72px;width:auto;"></a>
+                <p class="auth-tagline"></p>
+            </div>
+
+            <div class="auth-form-panel">
+                <form class="signin-form" id="signinForm" novalidate>
+                    <h1>Sign In</h1>
+                    <div class="form-group">
+                        <input type="email" id="identifier" placeholder="Email Id" autocomplete="email">
+                        <div class="error-message" id="identifierError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+                        <div class="error-message" id="passwordError"></div>
+                    </div>
+                    <div class="form-group">
+                        <select id="role">
+                            <option value="">Select Role</option>
+                            <option value="Reader">Reader</option>
+                            <!--<option value="Contributor">Contributor</option>
+                            <option value="Reviewer">Reviewer</option>
+                            <option value="Analyst">Analyst</option>
+                            <option value="Journalist">Journalist</option>--->
+                            <option value="Editor">Editor</option>
+                            <!--<option value="Moderator">Moderator</option>
+                            <option value="Publisher">Publisher</option>
+                            <option value="Admin">Admin</option>-->
+                        </select>
+                        <div class="error-message" id="roleError"></div>
+                    </div>
+                    <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <input type="checkbox" style="width: auto;">
+                        <span>Remember Me</span>
+                    </label>
+                    <div class="auth-btn-group">
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                        <a href="register.html" class="btn btn-secondary">Create Account</a>
+                    </div>
+                    <a href="404.html" class="read-more" style="display: block; width: 100%; text-align: center; margin-top: 15px;">Forgot Password?</a>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

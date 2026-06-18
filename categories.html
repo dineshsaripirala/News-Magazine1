@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Stackly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html" class="current">Categories</a>
+                <a href="latest.html">Latest News</a>
+                <a href="magazine.html">Magazine</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="signin.html">Sign In</a>
+                <a href="register.html" class="nav-register">Register</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div style="background-color: var(--teal); color: white; padding: 60px 20px; text-align: center;">
+            <div class="container">
+                <h1>Explore Categories</h1>
+                <p style="font-size: 18px; margin-top: 15px;">Discover in-depth coverage across all major topics</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="grid-4">
+                <div class="article-card">
+                    <img src="images/category-politics.webp" style="width:100%; height:150px; object-fit:cover;" alt="Politics" loading="lazy" decoding="async" width="400" height="150">
+                    <div class="article-card-content">
+                        <h3>Politics</h3>
+                        <p>1+ Articles</p>
+                        <a class="read-more" href="category.html?name=politics">Explore →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/category-business.webp" style="width:100%; height:150px; object-fit:cover;" alt="Business" loading="lazy" decoding="async" width="400" height="150">
+                    <div class="article-card-content">
+                        <h3>Business</h3>
+                        <p>1+ Articles</p>
+                        <a class="read-more" href="category.html?name=business">Explore →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/category-technology.webp" style="width:100%; height:150px; object-fit:cover;" alt="Technology" loading="lazy" decoding="async" width="400" height="150">
+                    <div class="article-card-content">
+                        <h3>Technology</h3>
+                        <p>1+ Articles</p>
+                        <a class="read-more" href="category.html?name=technology">Explore →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/category-sports.webp" style="width:100%; height:150px; object-fit:cover;" alt="Sports" loading="lazy" decoding="async" width="400" height="150">
+                    <div class="article-card-content">
+                        <h3>Sports</h3>
+                        <p>1+ Articles</p>
+                        <a class="read-more" href="category.html?name=sports">Explore →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/category-entertainment.webp" style="width:100%; height:150px; object-fit:cover;" alt="Entertainment" loading="lazy" decoding="async" width="400" height="150">
+                    <div class="article-card-content">
+                        <h3>Entertainment</h3>
+                        <p>1+ Articles</p>
+                        <a class="read-more" href="category.html?name=entertainment">Explore →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/category-education.webp" style="width:100%; height:150px; object-fit:cover;" alt="Education" loading="lazy" decoding="async" width="400" height="150">
+                    <div class="article-card-content">
+                        <h3>Education</h3>
+                        <p>1+ Articles</p>
+                        <a class="read-more" href="category.html?name=education">Explore →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/category-lifestyle.webp" style="width:100%; height:150px; object-fit:cover;" alt="Lifestyle" loading="lazy" decoding="async" width="400" height="150">
+                    <div class="article-card-content">
+                        <h3>Lifestyle</h3>
+                        <p>1+ Articles</p>
+                        <a class="read-more" href="category.html?name=lifestyle">Explore →</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="images/category-world-news.webp" style="width:100%; height:150px; object-fit:cover;" alt="World News" loading="lazy" decoding="async" width="400" height="150">
+                    <div class="article-card-content">
+                        <h3>World News</h3>
+                        <p>1+ Articles</p>
+                        <a class="read-more" href="category.html?name=world-news">Explore →</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="text-align: center; margin-top: 80px;">📰 Featured From Each Category</h2>
+            <div class="news-item" style="border-left: 4px solid var(--teal);">
+                <div style="flex-grow: 1;">
+                    <span class="category-badge">Technology</span>
+                    <p style="font-size: 18px; font-weight: bold; margin-top: 10px;">Revolutionary AI Technology Reshapes Global Markets</p>
+                </div>
+                <span style="color: var(--darkGray); font-size: 14px; white-space: nowrap; margin-left: 20px;">125.4K views</span>
+            </div>
+
+            <div class="news-item" style="border-left: 4px solid var(--teal);">
+                <div style="flex-grow: 1;">
+                    <span class="category-badge">Business</span>
+                    <p style="font-size: 18px; font-weight: bold; margin-top: 10px;">Economic Growth Surpasses Expectations in Q2</p>
+                </div>
+                <span style="color: var(--darkGray); font-size: 14px; white-space: nowrap; margin-left: 20px;">98.2K views</span>
+            </div>
+
+            <div class="news-item" style="border-left: 4px solid var(--teal);">
+                <div style="flex-grow: 1;">
+                    <span class="category-badge">Sports</span>
+                    <p style="font-size: 18px; font-weight: bold; margin-top: 10px;">Champion Wins Historic Olympic Medal</p>
+                </div>
+                <span style="color: var(--darkGray); font-size: 14px; white-space: nowrap; margin-left: 20px;">156.8K views</span>
+            </div>
+        </div>
+    </main>
+
+        <footer>
+        <div class="footer-grid">
+            <div>
+                <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="Stackly" style="height:64px;width:auto;vertical-align:middle;"></a>
+                <p style="margin-top: 10px; font-size: 14px; opacity: 0.75; max-width: 220px; line-height: 1.6;">India's most trusted News &amp; Magazine network, delivering unbiased journalism and in-depth stories since 2018.</p>
+                <div style="display: flex; gap: 12px; margin-top: 16px;">
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#1877F2'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x66;</a>
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#000'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1D54F;</a>
+                    <a href="404.html" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#E1306C'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1F4F7;</a>
+                    <!-- <a href="https://www.linkedin.com/company/stackly" target="_blank" rel="noopener" class="footer-social-icon" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: background 0.3s;" onmouseover="this.style.background='#0A66C2'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&#x1F4BC;</a> -->
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a class="footer-link" href="index.html"><span>Home</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="about.html"><span>About Us</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="categories.html"><span>Categories</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="latest.html"><span>Latest News</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="magazine.html"><span>Magazine</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="blog.html"><span>Blog</span><i class="link-arrow">→</i></a>
+                <a class="footer-link" href="contact.html"><span>Contact</span><i class="link-arrow">→</i></a>
+            </div>
+            <div class="footer-section">
+                <h3>News &amp; Magazine</h3>
+                <div class="newsroom-link"><span class="newsroom-icon">📰</span><span>Breaking News</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">🔥</span><span>Trending Stories</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">✍️</span><span>Editorial Picks</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📖</span><span>Monthly Magazine</span></div>
+                <div class="newsroom-link"><span class="newsroom-icon">📡</span><span>Industry Updates</span></div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-item"><span class="contact-icon">📍</span><span>123 News Street, Media City, MC 12345</span></div>
+                <div class="contact-item"><span class="contact-icon">📞</span><span>+1 (555) 123-4567</span></div>
+                <div class="contact-item"><span class="contact-icon">📧</span><a href="mailto:contact@stackly.com" style="color: inherit; text-decoration: none;">contact@stackly.com</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly. All Rights Reserved. | <a href="404.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a> | <a href="404.html" style="color: inherit; text-decoration: underline;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
